@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Tiempo en Chile</title>
+  
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="weather-app">
+  
+  <!-- Header con navegación -->
+  <header class="weather-app__header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <i class="bi bi-cloud-sun me-2"></i>El Tiempo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./detalle.html">
+                Detalle
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="weather-app__content container my-4">
+    <h1 class="text-center mb-4">Reporte del tiempo en Chile</h1>
+    
+    <section class="places row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+      
+      <!-- Santiago -->
+      <article class="col">
+        <div class="place-card place-card--sunny card text-center h-100" data-city="santiago">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-brightness-high"></i>
+            <h5 class="place-card__name card-title mt-3">Santiago</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">30°C</p>
+            <p class="place-card__status card-text text-muted">Soleado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Punta Arenas -->
+      <article class="col">
+        <div class="place-card place-card--cloudy card text-center h-100" data-city="punta-arenas">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-cloudy-fill"></i>
+            <h5 class="place-card__name card-title mt-3">Punta Arenas</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">9°C</p>
+            <p class="place-card__status card-text text-muted">Nublado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa Alemana -->
+      <article class="col">
+        <div class="place-card place-card--overcast card text-center h-100" data-city="villa-alemana">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-cloudy"></i>
+            <h5 class="place-card__name card-title mt-3">Villa Alemana</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">17°C</p>
+            <p class="place-card__status card-text text-muted">Muy Nublado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Copiapó -->
+      <article class="col">
+        <div class="place-card place-card--clear card text-center h-100" data-city="copiapo">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-sun"></i>
+            <h5 class="place-card__name card-title mt-3">Copiapó</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">18°C</p>
+            <p class="place-card__status card-text text-muted">Despejado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Valparaíso -->
+      <article class="col">
+        <div class="place-card place-card--partly-cloudy card text-center h-100" data-city="valparaiso">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-cloud-sun"></i>
+            <h5 class="place-card__name card-title mt-3">Valparaíso</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">15°C</p>
+            <p class="place-card__status card-text text-muted">Parcialmente nublado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- La Serena -->
+      <article class="col">
+        <div class="place-card place-card--sunny card text-center h-100" data-city="la-serena">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-brightness-high"></i>
+            <h5 class="place-card__name card-title mt-3">La Serena</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">19°C</p>
+            <p class="place-card__status card-text text-muted">Soleado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Talcahuano -->
+      <article class="col">
+        <div class="place-card place-card--sunny card text-center h-100" data-city="talcahuano">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-brightness-high"></i>
+            <h5 class="place-card__name card-title mt-3">Talcahuano</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">22°C</p>
+            <p class="place-card__status card-text text-muted">Soleado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Los Andes -->
+      <article class="col">
+        <div class="place-card place-card--sunny card text-center h-100" data-city="los-andes">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-brightness-high"></i>
+            <h5 class="place-card__name card-title mt-3">Los Andes</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">33°C</p>
+            <p class="place-card__status card-text text-muted">Soleado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Huechun -->
+      <article class="col">
+        <div class="place-card place-card--sunny card text-center h-100" data-city="huechun">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-brightness-high"></i>
+            <h5 class="place-card__name card-title mt-3">Huechun</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">31°C</p>
+            <p class="place-card__status card-text text-muted">Soleado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Puerto Montt -->
+      <article class="col">
+        <div class="place-card place-card--partly-cloudy card text-center h-100" data-city="puerto-montt">
+          <div class="card-body d-flex flex-column">
+            <i class="place-card__icon bi bi-cloud-sun"></i>
+            <h5 class="place-card__name card-title mt-3">Puerto Montt</h5>
+            <p class="place-card__temp card-text fs-4 fw-bold">17°C</p>
+            <p class="place-card__status card-text text-muted">Parcialmente Nublado</p>
+            <a href="#" class="place-card__link card-link mt-auto">Ver detalle</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="weather-app__footer container py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item">
+        <a href="./index.html" class="nav-link px-2 text-body-secondary">
+          Inicio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./detalle.html" class="nav-link px-2 text-body-secondary">
+          Detalle
+        </a>
+      </li>
+    </ul>
+    <p class="text-center text-body-secondary">
+      © 2025 Bootcamp Front End - Leonardo Rojas Escárez
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
