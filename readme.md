@@ -10,7 +10,7 @@ Aplicación web responsiva para consultar el clima actual y pronóstico semanal 
 ## 🚀 Tecnologías
 
 - HTML5 (semántico)
-- CSS3 + BEM
+- CSS3 + BEM  *** HÍbrido ***
 - Bootstrap 5.3.8
 - JavaScript ES6
 - Git/GitHub
