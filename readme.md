@@ -20,7 +20,7 @@ Aplicación web responsiva para consultar el clima actual y pronóstico semanal 
 ## 📁 Estructura
 
 ```
-weather-frontend-m2/
+weather-frontend-m3/
 ├── index.html              # Página principal
 ├── detalle.html            # Página de detalle
 ├── README.md
@@ -40,7 +40,7 @@ weather-frontend-m2/
 git clone https://github.com/arensrojas/weather-frontend-m3.git
 
 # Entrar al directorio
-cd weather-frontend-m2
+cd weather-frontend-m3
 
 # Abrir index.html en tu navegador
 ```
@@ -76,7 +76,7 @@ La Serena • Talcahuano • Los Andes • Huechun • Puerto Montt
 ## 🔗 Enlaces
 
 - **Repositorio:** [Añadir URL de GitHub aquí]
-- **Demo:** [Añadir URL de GitHub Pages aquí]
+https://github.com/arensrojas/weather-frontend-m3
 
 ---
 
