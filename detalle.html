@@ -1,0 +1,200 @@
+/* ========================================
+   Estilos generales con metodología BEM
+   ======================================== */
+
+/* Bloque principal de la aplicación */
+.weather-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-app__content {
+  flex: 1;
+}
+
+.weather-app__footer {
+  margin-top: auto;
+}
+
+/* ========================================
+   Place Cards (Tarjetas de localidades)
+   ======================================== */
+
+.place-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.place-card__icon {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+/* Modificadores de color según el clima */
+.place-card--sunny .place-card__icon {
+  color: #FFD700;
+}
+
+.place-card--cloudy .place-card__icon {
+  color: #808080;
+}
+
+.place-card--overcast .place-card__icon {
+  color: #696969;
+}
+
+.place-card--clear .place-card__icon {
+  color: #FFA500;
+}
+
+.place-card--partly-cloudy .place-card__icon {
+  color: #87CEEB;
+}
+
+.place-card__name {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.place-card__temp {
+  color: #333;
+  margin: 10px 0 5px 0;
+}
+
+.place-card__status {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.place-card__link {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.place-card__link:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* ========================================
+   Detail Card (Tarjeta de detalle)
+   ======================================== */
+
+.detail-card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card__icon {
+  font-size: 90px;
+  color: #FFD700;
+}
+
+.detail-card__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.detail-card__info {
+  font-size: 1rem;
+}
+
+.detail-card__info .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 12px 0;
+}
+
+.detail-card__info .list-group-item:first-child {
+  border-top: none;
+}
+
+/* ========================================
+   Forecast (Pronóstico semanal)
+   ======================================== */
+
+.forecast {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecast__list .list-group-item {
+  padding: 12px 15px;
+  transition: background-color 0.2s ease;
+}
+
+.forecast__list .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.forecast__list .bi {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* ========================================
+   Navbar customización
+   ======================================== */
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.navbar-brand i {
+  color: #87CEEB;
+}
+
+/* ========================================
+   Responsive adjustments
+   ======================================== */
+
+/* Móviles pequeños (≤420px) */
+@media (max-width: 420px) {
+  .place-card__icon {
+    font-size: 50px;
+  }
+  
+  .place-card__name {
+    font-size: 1rem;
+  }
+  
+  .place-card__temp {
+    font-size: 1.2rem;
+  }
+  
+  .detail-card__icon {
+    font-size: 70px;
+  }
+  
+  .detail-card__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets y móviles grandes (421px - 767px) */
+@media (min-width: 421px) and (max-width: 767px) {
+  .place-card__icon {
+    font-size: 55px;
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .place-card__icon {
+    font-size: 65px;
+  }
+  
+  .weather-app__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
